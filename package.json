@@ -1,0 +1,15 @@
+{
+  "name": "open-matchday-website",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Open Matchday product website, generated catalogs, registry browser, and SEO",
+  "scripts": {
+    "sync": "node scripts/sync-catalogs.mjs",
+    "generate": "node scripts/generate-site.mjs",
+    "check": "node scripts/generate-site.mjs && node scripts/check-site.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -408,6 +408,151 @@ code {
   color: var(--accent);
 }
 
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  -webkit-overflow-scrolling: touch;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  min-width: 36rem;
+}
+
+.matrix-table th,
+.matrix-table td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.matrix-table thead th {
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.matrix-table tbody th {
+  font-weight: 600;
+  min-width: 10rem;
+}
+
+.state-pill {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: var(--om-font-mono);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.state-partial .state-pill {
+  color: var(--fg);
+  border-color: var(--border-active);
+}
+
+.state-verified .state-pill {
+  color: var(--accent);
+  border-color: var(--border-active);
+}
+
+.catalog-item {
+  margin: 0 0 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.catalog-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  scroll-margin-top: 1rem;
+}
+
+.status-available,
+.status-planned {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--border);
+  font-family: var(--om-font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  vertical-align: middle;
+  color: var(--muted);
+}
+
+.status-available {
+  color: var(--accent);
+  border-color: var(--border-active);
+}
+
+.search-form {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.search-form label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.search-row input[type="search"] {
+  flex: 1 1 14rem;
+  min-height: 44px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--surface-raised);
+  color: var(--fg);
+  font: inherit;
+}
+
+.search-row input[type="search"]:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filter-row label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  color: var(--fg);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 @media (max-width: 320px) {
   main {
     padding-left: 0.75rem;
@@ -416,5 +561,10 @@ code {
 
   .hero-brand {
     font-size: 2rem;
+  }
+
+  .site-nav a {
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
   }
 }

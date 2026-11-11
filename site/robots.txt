@@ -1,0 +1,6 @@
+# Honest robots for the GitHub Pages project site.
+# Sitemap guidance: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+User-agent: *
+Allow: /
+
+Sitemap: https://openmatchday.github.io/website/sitemap.xml

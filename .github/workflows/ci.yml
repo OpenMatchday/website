@@ -20,5 +20,7 @@ jobs:
           test -f LICENSE
           test -f site/index.html
           test -f site/.nojekyll
-      - name: Check static site artifact
-        run: node scripts/check-site.mjs
+      - name: Generate and check static site
+        run: |
+          node scripts/generate-site.mjs
+          node scripts/check-site.mjs

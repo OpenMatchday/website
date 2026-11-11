@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1.0",
+  "base_url": "https://openmatchday.github.io/website/",
+  "notes": "Budgets for the static GitHub Pages artifact. Values are file-size gates for CI, not runtime latency claims.",
+  "limits": {
+    "max_html_bytes": 120000,
+    "max_css_bytes": 40000,
+    "max_js_bytes": 40000,
+    "max_svg_bytes": 20000,
+    "max_total_site_bytes": 500000,
+    "max_single_asset_bytes": 120000
+  },
+  "responsive_min_width_px": 320,
+  "wcag": "2.2 AA"
+}

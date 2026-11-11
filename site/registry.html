@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0f1412">
+  <title>Registry browser -- Open Matchday</title>
+  <meta name="description" content="Search the public Open Matchday teams registry index. Shipped fixtures are clearly fictional.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://openmatchday.github.io/website/registry.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Open Matchday" translate="no">
+  <meta property="og:title" content="Registry browser -- Open Matchday">
+  <meta property="og:description" content="Search the public Open Matchday teams registry index. Shipped fixtures are clearly fictional.">
+  <meta property="og:url" content="https://openmatchday.github.io/website/registry.html">
+  <meta property="og:image" content="https://openmatchday.github.io/website/mark.svg">
+  <meta property="og:locale" content="en_US">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Registry browser -- Open Matchday","description":"Search the public Open Matchday teams registry index. Shipped fixtures are clearly fictional.","url":"https://openmatchday.github.io/website/registry.html","isPartOf":{"@type":"WebSite","name":"Open Matchday","url":"https://openmatchday.github.io/website/"},"publisher":{"@type":"Organization","name":"Open Matchday","url":"https://github.com/OpenMatchday"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="index.html" aria-label="Open Matchday home">
+        <img class="brand-mark" src="mark.svg" width="40" height="40" alt="">
+        <span class="brand-name" translate="no">Open Matchday</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Product</a>
+        <a href="workflow.html">Workflow</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="docs.html">Docs</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="sports.html">Sports</a>
+        <a href="themes.html">Themes</a>
+        <a href="registry.html" aria-current="page">Registry</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="takedown.html">Takedown</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="hero-brand" translate="no">Open Matchday</p>
+      <h1 class="page-title">Registry browser</h1>
+      <p class="lede">
+        Search the public teams registry index. Shipped packages are clearly
+        fictional. Photos stay in the teams repository and are not mirrored here.
+      </p>
+    </header>
+
+    <section class="section" aria-labelledby="packages">
+      <h2 id="packages">Indexed packages</h2>
+      <ul>
+        <li><strong>Harbor Fiction Registry</strong> (harbor_fiction v0.1.1) -- Clearly fictional clubs and players for schema and UI fixtures only (AC-9.7). Not real organizations.</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="search">
+      <h2 id="search">Search</h2>
+      <form id="registry-search-form" class="search-form" role="search" action="registry.html" method="get">
+        <label for="registry-q">Find clubs, teams, players, or competitions</label>
+        <div class="search-row">
+          <input id="registry-q" name="q" type="search" autocomplete="off" spellcheck="false" placeholder="Example: Harbor Foxes…">
+          <button type="submit" class="cta">Search</button>
+        </div>
+        <fieldset class="filter-row">
+          <legend class="visually-hidden">Kind filter</legend>
+          <label><input type="radio" name="kind" value="all" checked> All</label>
+          <label><input type="radio" name="kind" value="club"> Clubs</label>
+          <label><input type="radio" name="kind" value="team"> Teams</label>
+          <label><input type="radio" name="kind" value="player"> Players</label>
+          <label><input type="radio" name="kind" value="competition"> Competitions</label>
+        </fieldset>
+      </form>
+      <p id="registry-status" class="meta-line" aria-live="polite">Loading registry index…</p>
+      <ul id="registry-results" class="link-list" aria-live="polite"></ul>
+      <noscript>
+        <p class="note">Enable JavaScript to filter the registry index, or open <a href="generated/teams-catalog.v0.json">the generated JSON index</a>.</p>
+      </noscript>
+    </section>
+
+    <p class="note">
+      <strong>Contribution wizard.</strong> Online submissions that open pull
+      requests ship with the community sign-in task. This page is search-only.
+    </p>
+    <script src="registry-search.js" defer></script>
+
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p translate="no">Open Matchday -- MIT</p>
+      <p>
+        <a href="https://github.com/OpenMatchday">GitHub organization</a>
+        ·
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="takedown.html">Takedown</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "generated_for": "website",
+  "available": [
+    {
+      "id": "basketball",
+      "display_name": "Basketball",
+      "version": "0.1.0",
+      "status": "available",
+      "summary": "Basketball sport package with FIBA, NBA, NCAA, and youth (Mini-Basketball) variants citing official rule publications.",
+      "variants": [
+        {
+          "id": "fiba",
+          "display_name": "FIBA",
+          "effective_date": "2026-10-01",
+          "official_source": {
+            "title": "FIBA Official Basketball Rules 2026 (v1.1)",
+            "url": "https://assets.fiba.basketball/image/upload/documents-corporate-fiba-official-rules-2026-v1-1.pdf",
+            "version_label": "2026 v1.1; valid as of 1 October 2026"
+          }
+        },
+        {
+          "id": "nba",
+          "display_name": "NBA",
+          "effective_date": "2025-10-01",
+          "official_source": {
+            "title": "Official NBA Playing Rules 2025-26",
+            "url": "https://cdn.nba.com/manage/2026/01/Official-2025-26-NBA-Playing-Rules.pdf",
+            "version_label": "2025-26 Official Rules"
+          }
+        },
+        {
+          "id": "ncaa",
+          "display_name": "NCAA Men's",
+          "effective_date": "2025-08-01",
+          "official_source": {
+            "title": "NCAA Men's Basketball Playing Rules (2025-26 Rules Book)",
+            "url": "https://www.ncaa.org/championships/playing-rules/mens-basketball-playing-rules/",
+            "version_label": "2025-26 Men's Basketball Rules Book (August 2025)"
+          }
+        },
+        {
+          "id": "youth",
+          "display_name": "Youth (FIBA Mini-Basketball)",
+          "effective_date": "2016-01-01",
+          "official_source": {
+            "title": "FIBA-WABC Mini-Basketball Coaches Manual (English)",
+            "url": "https://assets.fiba.basketball/image/upload/documents-corporate-mini-basketball-mini-basketball-coaches-manual-eng.pdf",
+            "version_label": "FIBA-WABC Mini-Basketball coaches manual; (c) 2016 FIBA-WABC"
+          }
+        }
+      ],
+      "source_package": "packages/basketball"
+    },
+    {
+      "id": "futsal",
+      "display_name": "Futsal",
+      "version": "0.1.0",
+      "status": "available",
+      "summary": "Futsal sport package with FIFA Laws and youth variants citing official FIFA Futsal Laws of the Game.",
+      "variants": [
+        {
+          "id": "fifa",
+          "display_name": "FIFA Laws",
+          "effective_date": "2025-09-05",
+          "official_source": {
+            "title": "FIFA Futsal Laws of the Game 2025-26",
+            "url": "https://assets.the-afc.com/downloads/referees/Futsal---Laws-of-the-Game-2025-2026---Sep-12-update.pdf",
+            "version_label": "2025-26; effective from 5 September 2025; approved by the Bureau of the Council"
+          }
+        },
+        {
+          "id": "youth",
+          "display_name": "Youth (FIFA modifications)",
+          "effective_date": "2025-09-05",
+          "official_source": {
+            "title": "FIFA Futsal Laws of the Game 2025-26 (Notes: youth organisational modifications)",
+            "url": "https://assets.the-afc.com/downloads/referees/Futsal---Laws-of-the-Game-2025-2026---Sep-12-update.pdf",
+            "version_label": "2025-26 Notes on the Futsal Laws; youth/veterans/disability/grassroots organisational modifications"
+          }
+        }
+      ],
+      "source_package": "packages/futsal"
+    }
+  ],
+  "planned": []
+}

@@ -1,6 +1,6 @@
 # Open Matchday -- website
 
-Product website, capability and sport catalogs, registry browser, and contribution wizard.
+Product website, capability and sport catalogs, registry browser, and contribution wizard entry points.
 
 Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 
@@ -15,26 +15,42 @@ Provisional host: **GitHub Pages** from this repository as a **project site**.
 
 Spike details: sibling `docs` repo `spikes/d6-website-stack-hosting.md`.
 
-## Pages (OM-038)
+## Pages
 
-Static HTML under `site/`:
+| Page | File | Notes |
+|---|---|---|
+| Product | `index.html` | Brand-first overview |
+| Workflow | `workflow.html` | Matchday journey |
+| Downloads | `downloads.html` | Source links only |
+| Docs | `docs.html` | Entry to docs repo |
+| Capabilities | `capabilities.html` | Generated from `data/capability-matrix.v0.json` |
+| Sports | `sports.html` | Generated from sports catalog |
+| Themes | `themes.html` | Generated from themes catalog |
+| Registry | `registry.html` | Client search over teams index |
+| Privacy | `privacy.html` | Local-first + registry privacy stub |
+| Takedown | `takedown.html` | Public takedown stub |
 
-| Page | File |
-|---|---|
-| Product | `index.html` |
-| Workflow | `workflow.html` |
-| Downloads | `downloads.html` |
-| Docs entry | `docs.html` |
-| Privacy stub | `privacy.html` |
-| Takedown stub | `takedown.html` |
+AC-12.3: real screenshots only; none shipped yet. Contribution wizard API is OM-040.
 
-AC-12.3: real screenshots only; none shipped yet. Generated catalogs, registry browser, contribution wizard, and SEO budget are later tasks.
+## Catalog sync and generate
 
-## Local checks
+From a full workspace checkout (siblings present):
 
 ```bash
-node scripts/check-site.mjs
+npm run sync
+npm run generate
+npm run check
 ```
+
+CI regenerates from committed `data/*.json` and runs `scripts/check-site.mjs` (secrets scan, WCAG smoke, 320px CSS gate, performance budget, SEO tags, planned-sport non-playable rule).
+
+## SEO sources
+
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
+- [Sitemaps](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+- [Robots meta](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag)
+- [Canonical URLs](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls)
+- [Open Graph protocol](https://ogp.me/)
 
 ## License
 

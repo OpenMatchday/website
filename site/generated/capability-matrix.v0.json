@@ -1,0 +1,156 @@
+{
+  "schema_version": "0.1.0",
+  "source": "ARCHITECTURE.md Capability matrix",
+  "states": ["verified", "partial", "unverified", "out of scope"],
+  "platforms": ["Android", "iOS", "Windows", "Linux", "macOS"],
+  "honesty_note": "States are copied from measurement-backed ARCHITECTURE cells. No latency, bitrate, or unpublished numeric claims appear here. OM-046 performs the verification pass.",
+  "rows": [
+    {
+      "capability": "Director",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Camera capture + send",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "partial",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      },
+      "notes": {
+        "Windows": "OM-014 2026-11-10: two Preview paths; cam-1 ASUS HD webcam dshow + cam-2 lavfi testsrc fallback when only one usable dshow video device; independent audio meters; dual-device send pending"
+      }
+    },
+    {
+      "capability": "Scoreboard Reader + OCR",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Event Operator",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Graphics Operator",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Social Operator",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Program Monitor",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "BLE discovery/control",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Hardware encode",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "partial",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      },
+      "notes": {
+        "Windows": "AMF H.264/HEVC + MF H.264 smoke PASS 2026-11-09 on AMD Radeon Graphics; NVENC/QSV absent",
+        "Linux": "WSL VA-API unavailable 2026-11-09"
+      }
+    },
+    {
+      "capability": "Recording",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Live output 16:9",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Live output 9:16",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Live output 1:1",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    },
+    {
+      "capability": "Multi-output (2+ aspects)",
+      "states": {
+        "Android": "unverified",
+        "iOS": "unverified",
+        "Windows": "unverified",
+        "Linux": "unverified",
+        "macOS": "unverified"
+      }
+    }
+  ]
+}

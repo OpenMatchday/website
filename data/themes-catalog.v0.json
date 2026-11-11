@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1.0",
+  "generated_for": "website",
+  "themes": [
+    {
+      "id": "matchday-neutral",
+      "title": "Matchday Neutral",
+      "version": "0.1.0",
+      "description": "Fictional neutral broadcast theme for Open Matchday golden paths.",
+      "aspects": [
+        "16:9",
+        "9:16",
+        "1:1"
+      ],
+      "fiction": true,
+      "token_contract_version": "0.1.0",
+      "source_package": "packages/matchday-neutral"
+    }
+  ]
+}

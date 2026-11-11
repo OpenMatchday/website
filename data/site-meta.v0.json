@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "site_name": "Open Matchday",
+  "base_url": "https://openmatchday.github.io/website/",
+  "locale": "en",
+  "theme_color": "#0f1412",
+  "organization": {
+    "name": "Open Matchday",
+    "url": "https://github.com/OpenMatchday",
+    "logo": "https://openmatchday.github.io/website/mark.svg"
+  },
+  "sources": {
+    "wcag": "https://www.w3.org/TR/WCAG22/",
+    "sitemap": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
+    "robots_meta": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag",
+    "canonical": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
+    "og": "https://ogp.me/"
+  }
+}

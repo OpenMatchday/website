@@ -1,0 +1,295 @@
+{
+  "schema_version": "0.1.0",
+  "generated_for": "website",
+  "note": "Public registry browser index. Fictional fixtures only in shipped packages. Photos are not mirrored onto the website.",
+  "packages": [
+    {
+      "package_id": "harbor_fiction",
+      "display_name": "Harbor Fiction Registry",
+      "version": "0.1.1",
+      "description": "Clearly fictional clubs and players for schema and UI fixtures only (AC-9.7). Not real organizations.",
+      "fiction": true
+    }
+  ],
+  "entries": [
+    {
+      "kind": "club",
+      "id": "cedar_ridge_club",
+      "package_id": "harbor_fiction",
+      "name": "Cedar Ridge Sports Club (fictional)",
+      "alias": "Cedar Club",
+      "sport_ids": [
+        "futsal"
+      ],
+      "fiction": true,
+      "search_text": "cedar ridge sports club (fictional) cedar club cedar_ridge_club"
+    },
+    {
+      "kind": "club",
+      "id": "north_harbor_club",
+      "package_id": "harbor_fiction",
+      "name": "North Harbor Athletics Club (fictional)",
+      "alias": "Harbor Club",
+      "sport_ids": [
+        "basketball"
+      ],
+      "fiction": true,
+      "search_text": "north harbor athletics club (fictional) harbor club north_harbor_club"
+    },
+    {
+      "kind": "competition",
+      "id": "cedar_indoor",
+      "package_id": "harbor_fiction",
+      "name": "Cedar Indoor Cup (fictional)",
+      "sport_id": "futsal",
+      "sport_name": "Futsal",
+      "fiction": true,
+      "search_text": "cedar indoor cup (fictional) cedar_indoor futsal"
+    },
+    {
+      "kind": "competition",
+      "id": "harbor_open",
+      "package_id": "harbor_fiction",
+      "name": "Harbor Open (fictional)",
+      "sport_id": "basketball",
+      "sport_name": "Basketball",
+      "fiction": true,
+      "search_text": "harbor open (fictional) harbor_open basketball"
+    },
+    {
+      "kind": "player",
+      "id": "alex_rivera",
+      "package_id": "harbor_fiction",
+      "name": "Alex Rivera",
+      "alias": "A. Rivera",
+      "is_minor": false,
+      "has_photo": true,
+      "team_names": [
+        "North Harbor Foxes"
+      ],
+      "fiction": true,
+      "search_text": "alex rivera a. rivera alex_rivera north harbor foxes"
+    },
+    {
+      "kind": "player",
+      "id": "blake_nguyen",
+      "package_id": "harbor_fiction",
+      "name": "Blake Nguyen",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": true,
+      "team_names": [
+        "North Harbor Foxes"
+      ],
+      "fiction": true,
+      "search_text": "blake nguyen blake_nguyen north harbor foxes"
+    },
+    {
+      "kind": "player",
+      "id": "casey_young",
+      "package_id": "harbor_fiction",
+      "name": "Casey Young",
+      "alias": "C. Young",
+      "is_minor": true,
+      "has_photo": false,
+      "team_names": [
+        "North Harbor Kits"
+      ],
+      "fiction": true,
+      "search_text": "casey young c. young casey_young north harbor kits"
+    },
+    {
+      "kind": "player",
+      "id": "drew_santos",
+      "package_id": "harbor_fiction",
+      "name": "Drew Santos",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "Cedar Ridge Owls"
+      ],
+      "fiction": true,
+      "search_text": "drew santos drew_santos cedar ridge owls"
+    },
+    {
+      "kind": "player",
+      "id": "eden_park",
+      "package_id": "harbor_fiction",
+      "name": "Eden Park",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "North Harbor Foxes"
+      ],
+      "fiction": true,
+      "search_text": "eden park eden_park north harbor foxes"
+    },
+    {
+      "kind": "player",
+      "id": "finley_ortiz",
+      "package_id": "harbor_fiction",
+      "name": "Finley Ortiz",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "North Harbor Foxes"
+      ],
+      "fiction": true,
+      "search_text": "finley ortiz finley_ortiz north harbor foxes"
+    },
+    {
+      "kind": "player",
+      "id": "gray_morrison",
+      "package_id": "harbor_fiction",
+      "name": "Gray Morrison",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "North Harbor Foxes"
+      ],
+      "fiction": true,
+      "search_text": "gray morrison gray_morrison north harbor foxes"
+    },
+    {
+      "kind": "player",
+      "id": "harper_quinn",
+      "package_id": "harbor_fiction",
+      "name": "Harper Quinn",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "North Harbor Foxes"
+      ],
+      "fiction": true,
+      "search_text": "harper quinn harper_quinn north harbor foxes"
+    },
+    {
+      "kind": "player",
+      "id": "indie_vale",
+      "package_id": "harbor_fiction",
+      "name": "Indie Vale",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "North Harbor Foxes"
+      ],
+      "fiction": true,
+      "search_text": "indie vale indie_vale north harbor foxes"
+    },
+    {
+      "kind": "player",
+      "id": "jordan_lee",
+      "package_id": "harbor_fiction",
+      "name": "Jordan Lee",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "Cedar Ridge Owls"
+      ],
+      "fiction": true,
+      "search_text": "jordan lee jordan_lee cedar ridge owls"
+    },
+    {
+      "kind": "player",
+      "id": "kai_moretti",
+      "package_id": "harbor_fiction",
+      "name": "Kai Moretti",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "Cedar Ridge Owls"
+      ],
+      "fiction": true,
+      "search_text": "kai moretti kai_moretti cedar ridge owls"
+    },
+    {
+      "kind": "player",
+      "id": "logan_hayes",
+      "package_id": "harbor_fiction",
+      "name": "Logan Hayes",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "Cedar Ridge Owls"
+      ],
+      "fiction": true,
+      "search_text": "logan hayes logan_hayes cedar ridge owls"
+    },
+    {
+      "kind": "player",
+      "id": "morgan_diaz",
+      "package_id": "harbor_fiction",
+      "name": "Morgan Diaz",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "Cedar Ridge Owls"
+      ],
+      "fiction": true,
+      "search_text": "morgan diaz morgan_diaz cedar ridge owls"
+    },
+    {
+      "kind": "player",
+      "id": "remy_cole",
+      "package_id": "harbor_fiction",
+      "name": "Remy Cole",
+      "alias": null,
+      "is_minor": false,
+      "has_photo": false,
+      "team_names": [
+        "Cedar Ridge Owls"
+      ],
+      "fiction": true,
+      "search_text": "remy cole remy_cole cedar ridge owls"
+    },
+    {
+      "kind": "team",
+      "id": "cedar_ridge_owls",
+      "package_id": "harbor_fiction",
+      "name": "Cedar Ridge Owls",
+      "alias": "Owls",
+      "club_id": "cedar_ridge_club",
+      "club_name": "Cedar Ridge Sports Club (fictional)",
+      "sport_id": "futsal",
+      "sport_name": "Futsal",
+      "fiction": true,
+      "search_text": "cedar ridge owls owls cedar_ridge_owls cedar ridge sports club (fictional) futsal"
+    },
+    {
+      "kind": "team",
+      "id": "north_harbor_foxes",
+      "package_id": "harbor_fiction",
+      "name": "North Harbor Foxes",
+      "alias": "Foxes",
+      "club_id": "north_harbor_club",
+      "club_name": "North Harbor Athletics Club (fictional)",
+      "sport_id": "basketball",
+      "sport_name": "Basketball",
+      "fiction": true,
+      "search_text": "north harbor foxes foxes north_harbor_foxes north harbor athletics club (fictional) basketball"
+    },
+    {
+      "kind": "team",
+      "id": "north_harbor_kits",
+      "package_id": "harbor_fiction",
+      "name": "North Harbor Kits",
+      "alias": "Kits",
+      "club_id": "north_harbor_club",
+      "club_name": "North Harbor Athletics Club (fictional)",
+      "sport_id": "basketball",
+      "sport_name": "Basketball",
+      "fiction": true,
+      "search_text": "north harbor kits kits north_harbor_kits north harbor athletics club (fictional) basketball"
+    }
+  ]
+}
