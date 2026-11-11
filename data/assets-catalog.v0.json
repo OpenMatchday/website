@@ -1,0 +1,775 @@
+{
+  "schema_version": "0.1.0",
+  "generated_for": "website",
+  "note": "Default package assets from sports packages (court/pitch geometry, formations, scoreboard field schemas). No live scores. No fabricated match results.",
+  "packages": [
+    {
+      "id": "basketball",
+      "display_name": "Basketball",
+      "version": "0.1.0",
+      "summary": "Basketball sport package with FIBA, NBA, NCAA, and youth (Mini-Basketball) variants citing official rule publications.",
+      "field": {
+        "surface": "court",
+        "units": "m",
+        "width": 15,
+        "length": 28,
+        "marking_ids": [
+          "boundary",
+          "center_line",
+          "center_circle",
+          "home_basket",
+          "away_basket",
+          "home_three_point_arc",
+          "away_three_point_arc",
+          "home_restricted_area",
+          "away_restricted_area"
+        ],
+        "markings": [
+          {
+            "id": "boundary",
+            "kind": "boundary",
+            "geometry": {
+              "type": "polygon",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  28,
+                  0
+                ],
+                [
+                  28,
+                  15
+                ],
+                [
+                  0,
+                  15
+                ]
+              ]
+            }
+          },
+          {
+            "id": "center_line",
+            "kind": "center",
+            "geometry": {
+              "type": "polyline",
+              "points": [
+                [
+                  14,
+                  0
+                ],
+                [
+                  14,
+                  15
+                ]
+              ]
+            }
+          },
+          {
+            "id": "center_circle",
+            "kind": "center",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  14,
+                  7.5
+                ]
+              ],
+              "radius": 1.8
+            }
+          },
+          {
+            "id": "home_basket",
+            "kind": "goal",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  1.575,
+                  7.5
+                ]
+              ],
+              "radius": 0.225
+            }
+          },
+          {
+            "id": "away_basket",
+            "kind": "goal",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  26.425,
+                  7.5
+                ]
+              ],
+              "radius": 0.225
+            }
+          },
+          {
+            "id": "home_three_point_arc",
+            "kind": "arc",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  1.575,
+                  7.5
+                ]
+              ],
+              "radius": 6.75
+            }
+          },
+          {
+            "id": "away_three_point_arc",
+            "kind": "arc",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  26.425,
+                  7.5
+                ]
+              ],
+              "radius": 6.75
+            }
+          },
+          {
+            "id": "home_restricted_area",
+            "kind": "key",
+            "geometry": {
+              "type": "polygon",
+              "points": [
+                [
+                  0,
+                  5.7
+                ],
+                [
+                  5.8,
+                  5.7
+                ],
+                [
+                  5.8,
+                  9.3
+                ],
+                [
+                  0,
+                  9.3
+                ]
+              ]
+            }
+          },
+          {
+            "id": "away_restricted_area",
+            "kind": "key",
+            "geometry": {
+              "type": "polygon",
+              "points": [
+                [
+                  22.2,
+                  5.7
+                ],
+                [
+                  28,
+                  5.7
+                ],
+                [
+                  28,
+                  9.3
+                ],
+                [
+                  22.2,
+                  9.3
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "formations": [
+        {
+          "id": "starting_five",
+          "display_name": "Starting Five",
+          "slots": [
+            {
+              "position_id": "point_guard",
+              "x": 0.35,
+              "y": 0.5
+            },
+            {
+              "position_id": "shooting_guard",
+              "x": 0.45,
+              "y": 0.22
+            },
+            {
+              "position_id": "small_forward",
+              "x": 0.45,
+              "y": 0.78
+            },
+            {
+              "position_id": "power_forward",
+              "x": 0.62,
+              "y": 0.32
+            },
+            {
+              "position_id": "center",
+              "x": 0.72,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "spread",
+          "display_name": "Spread",
+          "slots": [
+            {
+              "position_id": "point_guard",
+              "x": 0.28,
+              "y": 0.5
+            },
+            {
+              "position_id": "shooting_guard",
+              "x": 0.42,
+              "y": 0.12
+            },
+            {
+              "position_id": "small_forward",
+              "x": 0.42,
+              "y": 0.88
+            },
+            {
+              "position_id": "power_forward",
+              "x": 0.68,
+              "y": 0.28
+            },
+            {
+              "position_id": "center",
+              "x": 0.68,
+              "y": 0.72
+            }
+          ]
+        }
+      ],
+      "scoreboard_fields": [
+        {
+          "id": "home_score",
+          "display_name": "Home",
+          "value_type": "integer"
+        },
+        {
+          "id": "away_score",
+          "display_name": "Away",
+          "value_type": "integer"
+        },
+        {
+          "id": "period",
+          "display_name": "Period",
+          "value_type": "integer"
+        },
+        {
+          "id": "game_clock",
+          "display_name": "Game Clock",
+          "value_type": "clock_ms"
+        },
+        {
+          "id": "shot_clock",
+          "display_name": "Shot Clock",
+          "value_type": "clock_ms",
+          "optional_for_variants": [
+            "youth"
+          ]
+        },
+        {
+          "id": "home_fouls",
+          "display_name": "Home Fouls",
+          "value_type": "integer"
+        },
+        {
+          "id": "away_fouls",
+          "display_name": "Away Fouls",
+          "value_type": "integer"
+        }
+      ],
+      "roster_positions": [
+        {
+          "id": "point_guard",
+          "display_name": "Point Guard",
+          "markers": [
+            "none"
+          ]
+        },
+        {
+          "id": "shooting_guard",
+          "display_name": "Shooting Guard",
+          "markers": [
+            "none"
+          ]
+        },
+        {
+          "id": "small_forward",
+          "display_name": "Small Forward",
+          "markers": [
+            "none"
+          ]
+        },
+        {
+          "id": "power_forward",
+          "display_name": "Power Forward",
+          "markers": [
+            "none"
+          ]
+        },
+        {
+          "id": "center",
+          "display_name": "Center",
+          "markers": [
+            "none"
+          ]
+        }
+      ],
+      "animation_ids": [
+        "lineup_in",
+        "lineup_out",
+        "score_bump",
+        "period_end"
+      ],
+      "source_package": "sports/packages/basketball"
+    },
+    {
+      "id": "futsal",
+      "display_name": "Futsal",
+      "version": "0.1.0",
+      "summary": "Futsal sport package with FIFA Laws and youth variants citing official FIFA Futsal Laws of the Game.",
+      "field": {
+        "surface": "pitch",
+        "units": "m",
+        "width": 20,
+        "length": 38,
+        "marking_ids": [
+          "boundary",
+          "center_line",
+          "center_circle",
+          "home_goal",
+          "away_goal",
+          "home_penalty_mark",
+          "away_penalty_mark",
+          "home_10m_mark",
+          "away_10m_mark",
+          "home_penalty_area",
+          "away_penalty_area",
+          "home_corner_arc_near",
+          "home_corner_arc_far",
+          "away_corner_arc_near",
+          "away_corner_arc_far"
+        ],
+        "markings": [
+          {
+            "id": "boundary",
+            "kind": "boundary",
+            "geometry": {
+              "type": "polygon",
+              "points": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  38,
+                  0
+                ],
+                [
+                  38,
+                  20
+                ],
+                [
+                  0,
+                  20
+                ]
+              ]
+            }
+          },
+          {
+            "id": "center_line",
+            "kind": "center",
+            "geometry": {
+              "type": "polyline",
+              "points": [
+                [
+                  19,
+                  0
+                ],
+                [
+                  19,
+                  20
+                ]
+              ]
+            }
+          },
+          {
+            "id": "center_circle",
+            "kind": "center",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  19,
+                  10
+                ]
+              ],
+              "radius": 3
+            }
+          },
+          {
+            "id": "home_goal",
+            "kind": "goal",
+            "geometry": {
+              "type": "polyline",
+              "points": [
+                [
+                  0,
+                  8.5
+                ],
+                [
+                  0,
+                  11.5
+                ]
+              ]
+            }
+          },
+          {
+            "id": "away_goal",
+            "kind": "goal",
+            "geometry": {
+              "type": "polyline",
+              "points": [
+                [
+                  38,
+                  8.5
+                ],
+                [
+                  38,
+                  11.5
+                ]
+              ]
+            }
+          },
+          {
+            "id": "home_penalty_mark",
+            "kind": "other",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  6,
+                  10
+                ]
+              ],
+              "radius": 0.06
+            }
+          },
+          {
+            "id": "away_penalty_mark",
+            "kind": "other",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  32,
+                  10
+                ]
+              ],
+              "radius": 0.06
+            }
+          },
+          {
+            "id": "home_10m_mark",
+            "kind": "other",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  10,
+                  10
+                ]
+              ],
+              "radius": 0.06
+            }
+          },
+          {
+            "id": "away_10m_mark",
+            "kind": "other",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  28,
+                  10
+                ]
+              ],
+              "radius": 0.06
+            }
+          },
+          {
+            "id": "home_penalty_area",
+            "kind": "key",
+            "geometry": {
+              "type": "polygon",
+              "points": [
+                [
+                  0,
+                  2.5
+                ],
+                [
+                  6,
+                  8.42
+                ],
+                [
+                  6,
+                  11.58
+                ],
+                [
+                  0,
+                  17.5
+                ]
+              ]
+            }
+          },
+          {
+            "id": "away_penalty_area",
+            "kind": "key",
+            "geometry": {
+              "type": "polygon",
+              "points": [
+                [
+                  38,
+                  2.5
+                ],
+                [
+                  32,
+                  8.42
+                ],
+                [
+                  32,
+                  11.58
+                ],
+                [
+                  38,
+                  17.5
+                ]
+              ]
+            }
+          },
+          {
+            "id": "home_corner_arc_near",
+            "kind": "arc",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  0,
+                  0
+                ]
+              ],
+              "radius": 0.25
+            }
+          },
+          {
+            "id": "home_corner_arc_far",
+            "kind": "arc",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  0,
+                  20
+                ]
+              ],
+              "radius": 0.25
+            }
+          },
+          {
+            "id": "away_corner_arc_near",
+            "kind": "arc",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  38,
+                  0
+                ]
+              ],
+              "radius": 0.25
+            }
+          },
+          {
+            "id": "away_corner_arc_far",
+            "kind": "arc",
+            "geometry": {
+              "type": "circle",
+              "points": [
+                [
+                  38,
+                  20
+                ]
+              ],
+              "radius": 0.25
+            }
+          }
+        ]
+      },
+      "formations": [
+        {
+          "id": "standard_4_1",
+          "display_name": "Standard 1-2-1",
+          "slots": [
+            {
+              "position_id": "goalkeeper",
+              "x": 0.08,
+              "y": 0.5
+            },
+            {
+              "position_id": "defender",
+              "x": 0.28,
+              "y": 0.5
+            },
+            {
+              "position_id": "left_winger",
+              "x": 0.48,
+              "y": 0.22
+            },
+            {
+              "position_id": "right_winger",
+              "x": 0.48,
+              "y": 0.78
+            },
+            {
+              "position_id": "pivot",
+              "x": 0.72,
+              "y": 0.5
+            }
+          ]
+        },
+        {
+          "id": "diamond",
+          "display_name": "Diamond",
+          "slots": [
+            {
+              "position_id": "goalkeeper",
+              "x": 0.08,
+              "y": 0.5
+            },
+            {
+              "position_id": "defender",
+              "x": 0.32,
+              "y": 0.5
+            },
+            {
+              "position_id": "left_winger",
+              "x": 0.52,
+              "y": 0.28
+            },
+            {
+              "position_id": "right_winger",
+              "x": 0.52,
+              "y": 0.72
+            },
+            {
+              "position_id": "pivot",
+              "x": 0.74,
+              "y": 0.5
+            }
+          ]
+        }
+      ],
+      "scoreboard_fields": [
+        {
+          "id": "home_score",
+          "display_name": "Home",
+          "value_type": "integer"
+        },
+        {
+          "id": "away_score",
+          "display_name": "Away",
+          "value_type": "integer"
+        },
+        {
+          "id": "period",
+          "display_name": "Half",
+          "value_type": "integer"
+        },
+        {
+          "id": "game_clock",
+          "display_name": "Game Clock",
+          "value_type": "clock_ms"
+        },
+        {
+          "id": "home_accumulated_fouls",
+          "display_name": "Home Accumulated Fouls",
+          "value_type": "integer"
+        },
+        {
+          "id": "away_accumulated_fouls",
+          "display_name": "Away Accumulated Fouls",
+          "value_type": "integer"
+        },
+        {
+          "id": "home_timeouts_remaining",
+          "display_name": "Home Timeouts",
+          "value_type": "integer"
+        },
+        {
+          "id": "away_timeouts_remaining",
+          "display_name": "Away Timeouts",
+          "value_type": "integer"
+        }
+      ],
+      "roster_positions": [
+        {
+          "id": "goalkeeper",
+          "display_name": "Goalkeeper",
+          "markers": [
+            "goalkeeper"
+          ]
+        },
+        {
+          "id": "defender",
+          "display_name": "Defender (Fixo)",
+          "markers": [
+            "none"
+          ]
+        },
+        {
+          "id": "left_winger",
+          "display_name": "Left Winger (Ala)",
+          "markers": [
+            "none"
+          ]
+        },
+        {
+          "id": "right_winger",
+          "display_name": "Right Winger (Ala)",
+          "markers": [
+            "none"
+          ]
+        },
+        {
+          "id": "pivot",
+          "display_name": "Pivot",
+          "markers": [
+            "none"
+          ]
+        }
+      ],
+      "animation_ids": [
+        "lineup_in",
+        "lineup_out",
+        "score_bump",
+        "period_end"
+      ],
+      "source_package": "sports/packages/futsal"
+    }
+  ]
+}

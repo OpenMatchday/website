@@ -8,6 +8,7 @@ import {
   renderChromeStart,
   renderChromeEnd,
 } from "./lib/page.mjs"
+import { renderFieldSvg } from "./lib/court-svg.mjs"
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..")
 const siteDir = join(root, "site")
@@ -21,6 +22,7 @@ const capabilities = JSON.parse(
 const sports = JSON.parse(readFileSync(join(dataDir, "sports-catalog.v0.json"), "utf8"))
 const themes = JSON.parse(readFileSync(join(dataDir, "themes-catalog.v0.json"), "utf8"))
 const teams = JSON.parse(readFileSync(join(dataDir, "teams-catalog.v0.json"), "utf8"))
+const assets = JSON.parse(readFileSync(join(dataDir, "assets-catalog.v0.json"), "utf8"))
 const absoluteUrl = (file) => {
   if (file === "index.html") return meta.base_url
   return `${meta.base_url}${file}`
@@ -199,10 +201,12 @@ const registryMain = () => {
       <p class="hero-brand" translate="no">Open Matchday</p>
       <h1 class="page-title">Registry browser</h1>
       <p class="lede">
-        Search the public teams registry index. Shipped packages are clearly
-        fictional. Photos stay in the teams repository and are not mirrored here.
+        Schema samples only. Shipped registry packages are labeled fictional on
+        purpose (AC-9.7). They are not real clubs, not real players, and not live
+        match results. For real package geometry see <a href="assets.html">Assets</a>.
       </p>
     </header>
+    <p class="note warn-note"><strong>Not match data.</strong> Do not treat Harbor Fiction names as real organizations.</p>
 
     <section class="section" aria-labelledby="packages">
       <h2 id="packages">Indexed packages</h2>
@@ -243,6 +247,77 @@ const registryMain = () => {
 `
 }
 
+const assetsMain = () => {
+  const blocks = assets.packages
+    .map((pkg) => {
+      const formations = pkg.formations
+        .map((formation) => {
+          const svg = renderFieldSvg({
+            field: pkg.field,
+            formation,
+            title: `${pkg.display_name} ${formation.display_name}`,
+          })
+          return `<figure class="asset-card">
+          <figcaption><strong>${escapeHtml(formation.display_name)}</strong> <span class="meta-line">${escapeHtml(formation.id)}</span></figcaption>
+          ${svg}
+        </figure>`
+        })
+        .join("\n")
+      const scoreboard = pkg.scoreboard_fields
+        .map(
+          (field) =>
+            `<li><strong>${escapeHtml(field.display_name)}</strong> <code>${escapeHtml(field.id)}</code> · ${escapeHtml(field.value_type)}${field.optional_for_variants ? ` · optional for ${escapeHtml(field.optional_for_variants.join(", "))}` : ""}</li>`,
+        )
+        .join("\n")
+      const positions = (pkg.roster_positions ?? [])
+        .map(
+          (pos) =>
+            `<li><strong>${escapeHtml(pos.display_name ?? pos.id)}</strong> <code>${escapeHtml(pos.id)}</code></li>`,
+        )
+        .join("\n")
+      const clips = (pkg.animation_ids ?? [])
+        .map((id) => `<li><code>${escapeHtml(id)}</code></li>`)
+        .join("\n")
+      const bareCourt = renderFieldSvg({
+        field: pkg.field,
+        title: `${pkg.display_name} ${pkg.field.surface}`,
+      })
+      return `<section class="section asset-package" aria-labelledby="asset-${escapeHtml(pkg.id)}">
+      <h2 id="asset-${escapeHtml(pkg.id)}">${escapeHtml(pkg.display_name)}</h2>
+      <p>${escapeHtml(pkg.summary)}</p>
+      <p class="meta-line">${escapeHtml(pkg.field.surface)} ${escapeHtml(String(pkg.field.length))} x ${escapeHtml(String(pkg.field.width))} ${escapeHtml(pkg.field.units)} · package v${escapeHtml(pkg.version)}</p>
+      <h3>Court / pitch markings</h3>
+      <figure class="asset-card asset-card-wide">
+        <figcaption>Default geometry from <code>${escapeHtml(pkg.source_package)}/field.json</code></figcaption>
+        ${bareCourt}
+      </figure>
+      <h3>Formations</h3>
+      <div class="asset-grid">${formations}</div>
+      <h3>Scoreboard fields</h3>
+      <p class="note">Schema only. Empty values until an event operator or OCR fills them. No demo scores.</p>
+      <ul class="scoreboard-list">${scoreboard}</ul>
+      <h3>Roster positions</h3>
+      <ul>${positions}</ul>
+      <h3>Motion clips</h3>
+      <ul>${clips || "<li>None declared</li>"}</ul>
+    </section>`
+    })
+    .join("\n")
+
+  return `    <header class="hero hero-assets">
+      <p class="hero-brand" translate="no">Open Matchday</p>
+      <h1 class="page-title">Default package assets</h1>
+      <p class="lede">
+        Real sports-package defaults: court and pitch geometry, formations,
+        scoreboard field schemas, roster positions, and motion clip ids. Drawn
+        from cited package data -- not invented match results.
+      </p>
+    </header>
+    <p class="note"><strong>${escapeHtml(assets.note)}</strong></p>
+    ${blocks}
+`
+}
+
 mkdirSync(generatedDir, { recursive: true })
 copyFileSync(
   join(dataDir, "sports-catalog.v0.json"),
@@ -260,10 +335,15 @@ copyFileSync(
   join(dataDir, "capability-matrix.v0.json"),
   join(generatedDir, "capability-matrix.v0.json"),
 )
+copyFileSync(
+  join(dataDir, "assets-catalog.v0.json"),
+  join(generatedDir, "assets-catalog.v0.json"),
+)
 
 writePage("capabilities.html", capabilitiesMain())
 writePage("sports.html", sportsMain())
 writePage("themes.html", themesMain())
+writePage("assets.html", assetsMain())
 writePage("registry.html", registryMain())
 
 for (const page of PUBLIC_PAGES) {
@@ -271,6 +351,7 @@ for (const page of PUBLIC_PAGES) {
     page.file === "capabilities.html" ||
     page.file === "sports.html" ||
     page.file === "themes.html" ||
+    page.file === "assets.html" ||
     page.file === "registry.html"
   ) {
     continue
@@ -386,5 +467,5 @@ writeFileSync(
 )
 
 console.log(
-  `SITE_GENERATE_OK pages=${PUBLIC_PAGES.length} sports_available=${sports.available.length} sports_planned=${sports.planned.length} themes=${themes.themes.length} registry_entries=${teams.entries.length}`,
+  `SITE_GENERATE_OK pages=${PUBLIC_PAGES.length} sports_available=${sports.available.length} sports_planned=${sports.planned.length} themes=${themes.themes.length} assets_packages=${assets.packages.length} registry_entries=${teams.entries.length}`,
 )

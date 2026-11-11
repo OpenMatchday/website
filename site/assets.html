@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0f1412">
+  <title>Default assets -- Open Matchday</title>
+  <meta name="description" content="Default sports package assets: court and pitch geometry, formations, scoreboard field schemas, and motion clips. No fabricated match scores.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://openmatchday.github.io/website/assets.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Open Matchday" translate="no">
+  <meta property="og:title" content="Default assets -- Open Matchday">
+  <meta property="og:description" content="Default sports package assets: court and pitch geometry, formations, scoreboard field schemas, and motion clips. No fabricated match scores.">
+  <meta property="og:url" content="https://openmatchday.github.io/website/assets.html">
+  <meta property="og:image" content="https://openmatchday.github.io/website/mark.svg">
+  <meta property="og:locale" content="en_US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Default assets -- Open Matchday","description":"Default sports package assets: court and pitch geometry, formations, scoreboard field schemas, and motion clips. No fabricated match scores.","url":"https://openmatchday.github.io/website/assets.html","isPartOf":{"@type":"WebSite","name":"Open Matchday","url":"https://openmatchday.github.io/website/"},"publisher":{"@type":"Organization","name":"Open Matchday","url":"https://github.com/OpenMatchday"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="index.html" aria-label="Open Matchday home">
+        <img class="brand-mark" src="mark.svg" width="40" height="40" alt="">
+        <span class="brand-name" translate="no">Open Matchday</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Product</a>
+        <a href="workflow.html">Workflow</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="docs.html">Docs</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="sports.html">Sports</a>
+        <a href="themes.html">Themes</a>
+        <a href="assets.html" aria-current="page">Assets</a>
+        <a href="registry.html">Registry</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="takedown.html">Takedown</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="hero hero-assets">
+      <p class="hero-brand" translate="no">Open Matchday</p>
+      <h1 class="page-title">Default package assets</h1>
+      <p class="lede">
+        Real sports-package defaults: court and pitch geometry, formations,
+        scoreboard field schemas, roster positions, and motion clip ids. Drawn
+        from cited package data -- not invented match results.
+      </p>
+    </header>
+    <p class="note"><strong>Default package assets from sports packages (court/pitch geometry, formations, scoreboard field schemas). No live scores. No fabricated match results.</strong></p>
+    <section class="section asset-package" aria-labelledby="asset-basketball">
+      <h2 id="asset-basketball">Basketball</h2>
+      <p>Basketball sport package with FIBA, NBA, NCAA, and youth (Mini-Basketball) variants citing official rule publications.</p>
+      <p class="meta-line">court 28 x 15 m · package v0.1.0</p>
+      <h3>Court / pitch markings</h3>
+      <figure class="asset-card asset-card-wide">
+        <figcaption>Default geometry from <code>sports/packages/basketball/field.json</code></figcaption>
+        <svg class="asset-svg" viewBox="-1.12 -1.12 30.240000000000002 17.240000000000002" role="img" aria-label="Basketball court">
+  <rect x="-1.12" y="-1.12" width="30.240000000000002" height="17.240000000000002" class="asset-pitch-bg" />
+  <g class="asset-markings"><path d="M0 0 L28 0 L28 15 L0 15 Z" fill="none" stroke="currentColor" stroke-width="0.18" vector-effect="non-scaling-stroke" /><path d="M14 0 L14 15" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="14" cy="7.5" r="1.8" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="1.575" cy="7.5" r="0.225" fill="none" stroke="currentColor" stroke-width="0.14" vector-effect="non-scaling-stroke" /><circle cx="26.425" cy="7.5" r="0.225" fill="none" stroke="currentColor" stroke-width="0.14" vector-effect="non-scaling-stroke" /><circle cx="1.575" cy="7.5" r="6.75" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="26.425" cy="7.5" r="6.75" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 5.7 L5.8 5.7 L5.8 9.3 L0 9.3 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M22.2 5.7 L28 5.7 L28 9.3 L22.2 9.3 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /></g>
+  <g class="asset-slots"></g>
+</svg>
+      </figure>
+      <h3>Formations</h3>
+      <div class="asset-grid"><figure class="asset-card">
+          <figcaption><strong>Starting Five</strong> <span class="meta-line">starting_five</span></figcaption>
+          <svg class="asset-svg" viewBox="-1.12 -1.12 30.240000000000002 17.240000000000002" role="img" aria-label="Basketball Starting Five">
+  <rect x="-1.12" y="-1.12" width="30.240000000000002" height="17.240000000000002" class="asset-pitch-bg" />
+  <g class="asset-markings"><path d="M0 0 L28 0 L28 15 L0 15 Z" fill="none" stroke="currentColor" stroke-width="0.18" vector-effect="non-scaling-stroke" /><path d="M14 0 L14 15" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="14" cy="7.5" r="1.8" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="1.575" cy="7.5" r="0.225" fill="none" stroke="currentColor" stroke-width="0.14" vector-effect="non-scaling-stroke" /><circle cx="26.425" cy="7.5" r="0.225" fill="none" stroke="currentColor" stroke-width="0.14" vector-effect="non-scaling-stroke" /><circle cx="1.575" cy="7.5" r="6.75" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="26.425" cy="7.5" r="6.75" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 5.7 L5.8 5.7 L5.8 9.3 L0 9.3 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M22.2 5.7 L28 5.7 L28 9.3 L22.2 9.3 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /></g>
+  <g class="asset-slots"><g transform="translate(9.799999999999999 7.5)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">point guard</text>
+      </g><g transform="translate(12.6 3.3)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">shooting guard</text>
+      </g><g transform="translate(12.6 11.700000000000001)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">small forward</text>
+      </g><g transform="translate(17.36 4.8)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">power forward</text>
+      </g><g transform="translate(20.16 7.5)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">center</text>
+      </g></g>
+</svg>
+        </figure>
+<figure class="asset-card">
+          <figcaption><strong>Spread</strong> <span class="meta-line">spread</span></figcaption>
+          <svg class="asset-svg" viewBox="-1.12 -1.12 30.240000000000002 17.240000000000002" role="img" aria-label="Basketball Spread">
+  <rect x="-1.12" y="-1.12" width="30.240000000000002" height="17.240000000000002" class="asset-pitch-bg" />
+  <g class="asset-markings"><path d="M0 0 L28 0 L28 15 L0 15 Z" fill="none" stroke="currentColor" stroke-width="0.18" vector-effect="non-scaling-stroke" /><path d="M14 0 L14 15" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="14" cy="7.5" r="1.8" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="1.575" cy="7.5" r="0.225" fill="none" stroke="currentColor" stroke-width="0.14" vector-effect="non-scaling-stroke" /><circle cx="26.425" cy="7.5" r="0.225" fill="none" stroke="currentColor" stroke-width="0.14" vector-effect="non-scaling-stroke" /><circle cx="1.575" cy="7.5" r="6.75" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="26.425" cy="7.5" r="6.75" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 5.7 L5.8 5.7 L5.8 9.3 L0 9.3 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M22.2 5.7 L28 5.7 L28 9.3 L22.2 9.3 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /></g>
+  <g class="asset-slots"><g transform="translate(7.840000000000001 7.5)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">point guard</text>
+      </g><g transform="translate(11.76 1.7999999999999998)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">shooting guard</text>
+      </g><g transform="translate(11.76 13.2)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">small forward</text>
+      </g><g transform="translate(19.040000000000003 4.2)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">power forward</text>
+      </g><g transform="translate(19.040000000000003 10.799999999999999)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">center</text>
+      </g></g>
+</svg>
+        </figure></div>
+      <h3>Scoreboard fields</h3>
+      <p class="note">Schema only. Empty values until an event operator or OCR fills them. No demo scores.</p>
+      <ul class="scoreboard-list"><li><strong>Home</strong> <code>home_score</code> · integer</li>
+<li><strong>Away</strong> <code>away_score</code> · integer</li>
+<li><strong>Period</strong> <code>period</code> · integer</li>
+<li><strong>Game Clock</strong> <code>game_clock</code> · clock_ms</li>
+<li><strong>Shot Clock</strong> <code>shot_clock</code> · clock_ms · optional for youth</li>
+<li><strong>Home Fouls</strong> <code>home_fouls</code> · integer</li>
+<li><strong>Away Fouls</strong> <code>away_fouls</code> · integer</li></ul>
+      <h3>Roster positions</h3>
+      <ul><li><strong>Point Guard</strong> <code>point_guard</code></li>
+<li><strong>Shooting Guard</strong> <code>shooting_guard</code></li>
+<li><strong>Small Forward</strong> <code>small_forward</code></li>
+<li><strong>Power Forward</strong> <code>power_forward</code></li>
+<li><strong>Center</strong> <code>center</code></li></ul>
+      <h3>Motion clips</h3>
+      <ul><li><code>lineup_in</code></li>
+<li><code>lineup_out</code></li>
+<li><code>score_bump</code></li>
+<li><code>period_end</code></li></ul>
+    </section>
+<section class="section asset-package" aria-labelledby="asset-futsal">
+      <h2 id="asset-futsal">Futsal</h2>
+      <p>Futsal sport package with FIFA Laws and youth variants citing official FIFA Futsal Laws of the Game.</p>
+      <p class="meta-line">pitch 38 x 20 m · package v0.1.0</p>
+      <h3>Court / pitch markings</h3>
+      <figure class="asset-card asset-card-wide">
+        <figcaption>Default geometry from <code>sports/packages/futsal/field.json</code></figcaption>
+        <svg class="asset-svg" viewBox="-1.52 -1.52 41.04 23.04" role="img" aria-label="Futsal pitch">
+  <rect x="-1.52" y="-1.52" width="41.04" height="23.04" class="asset-pitch-bg" />
+  <g class="asset-markings"><path d="M0 0 L38 0 L38 20 L0 20 Z" fill="none" stroke="currentColor" stroke-width="0.18" vector-effect="non-scaling-stroke" /><path d="M19 0 L19 20" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="19" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 8.5 L0 11.5" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><path d="M38 8.5 L38 11.5" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="6" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="32" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="10" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="28" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 2.5 L6 8.42 L6 11.58 L0 17.5 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M38 2.5 L32 8.42 L32 11.58 L38 17.5 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="0" cy="0" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="0" cy="20" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="38" cy="0" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="38" cy="20" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /></g>
+  <g class="asset-slots"></g>
+</svg>
+      </figure>
+      <h3>Formations</h3>
+      <div class="asset-grid"><figure class="asset-card">
+          <figcaption><strong>Standard 1-2-1</strong> <span class="meta-line">standard_4_1</span></figcaption>
+          <svg class="asset-svg" viewBox="-1.52 -1.52 41.04 23.04" role="img" aria-label="Futsal Standard 1-2-1">
+  <rect x="-1.52" y="-1.52" width="41.04" height="23.04" class="asset-pitch-bg" />
+  <g class="asset-markings"><path d="M0 0 L38 0 L38 20 L0 20 Z" fill="none" stroke="currentColor" stroke-width="0.18" vector-effect="non-scaling-stroke" /><path d="M19 0 L19 20" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="19" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 8.5 L0 11.5" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><path d="M38 8.5 L38 11.5" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="6" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="32" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="10" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="28" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 2.5 L6 8.42 L6 11.58 L0 17.5 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M38 2.5 L32 8.42 L32 11.58 L38 17.5 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="0" cy="0" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="0" cy="20" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="38" cy="0" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="38" cy="20" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /></g>
+  <g class="asset-slots"><g transform="translate(3.04 10)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">goalkeeper</text>
+      </g><g transform="translate(10.64 10)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">defender</text>
+      </g><g transform="translate(18.24 4.4)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">left winger</text>
+      </g><g transform="translate(18.24 15.600000000000001)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">right winger</text>
+      </g><g transform="translate(27.36 10)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">pivot</text>
+      </g></g>
+</svg>
+        </figure>
+<figure class="asset-card">
+          <figcaption><strong>Diamond</strong> <span class="meta-line">diamond</span></figcaption>
+          <svg class="asset-svg" viewBox="-1.52 -1.52 41.04 23.04" role="img" aria-label="Futsal Diamond">
+  <rect x="-1.52" y="-1.52" width="41.04" height="23.04" class="asset-pitch-bg" />
+  <g class="asset-markings"><path d="M0 0 L38 0 L38 20 L0 20 Z" fill="none" stroke="currentColor" stroke-width="0.18" vector-effect="non-scaling-stroke" /><path d="M19 0 L19 20" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="19" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 8.5 L0 11.5" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><path d="M38 8.5 L38 11.5" fill="none" stroke="currentColor" stroke-width="0.1" vector-effect="non-scaling-stroke" /><circle cx="6" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="32" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="10" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="28" cy="10" r="0.06" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M0 2.5 L6 8.42 L6 11.58 L0 17.5 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><path d="M38 2.5 L32 8.42 L32 11.58 L38 17.5 Z" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="0" cy="0" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="0" cy="20" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="38" cy="0" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /><circle cx="38" cy="20" r="0.25" fill="none" stroke="currentColor" stroke-width="0.08" vector-effect="non-scaling-stroke" /></g>
+  <g class="asset-slots"><g transform="translate(3.04 10)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">goalkeeper</text>
+      </g><g transform="translate(12.16 10)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">defender</text>
+      </g><g transform="translate(19.76 5.6000000000000005)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">left winger</text>
+      </g><g transform="translate(19.76 14.399999999999999)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">right winger</text>
+      </g><g transform="translate(28.12 10)">
+        <circle r="0.55" class="slot-dot" />
+        <text y="1.35" text-anchor="middle" font-size="0.7" class="slot-label">pivot</text>
+      </g></g>
+</svg>
+        </figure></div>
+      <h3>Scoreboard fields</h3>
+      <p class="note">Schema only. Empty values until an event operator or OCR fills them. No demo scores.</p>
+      <ul class="scoreboard-list"><li><strong>Home</strong> <code>home_score</code> · integer</li>
+<li><strong>Away</strong> <code>away_score</code> · integer</li>
+<li><strong>Half</strong> <code>period</code> · integer</li>
+<li><strong>Game Clock</strong> <code>game_clock</code> · clock_ms</li>
+<li><strong>Home Accumulated Fouls</strong> <code>home_accumulated_fouls</code> · integer</li>
+<li><strong>Away Accumulated Fouls</strong> <code>away_accumulated_fouls</code> · integer</li>
+<li><strong>Home Timeouts</strong> <code>home_timeouts_remaining</code> · integer</li>
+<li><strong>Away Timeouts</strong> <code>away_timeouts_remaining</code> · integer</li></ul>
+      <h3>Roster positions</h3>
+      <ul><li><strong>Goalkeeper</strong> <code>goalkeeper</code></li>
+<li><strong>Defender (Fixo)</strong> <code>defender</code></li>
+<li><strong>Left Winger (Ala)</strong> <code>left_winger</code></li>
+<li><strong>Right Winger (Ala)</strong> <code>right_winger</code></li>
+<li><strong>Pivot</strong> <code>pivot</code></li></ul>
+      <h3>Motion clips</h3>
+      <ul><li><code>lineup_in</code></li>
+<li><code>lineup_out</code></li>
+<li><code>score_bump</code></li>
+<li><code>period_end</code></li></ul>
+    </section>
+
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p translate="no">Open Matchday -- MIT</p>
+      <p>
+        <a href="https://github.com/OpenMatchday">GitHub organization</a>
+        ·
+        <a href="https://openmatchday.github.io/docs/">Docs site</a>
+        ·
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="takedown.html">Takedown</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

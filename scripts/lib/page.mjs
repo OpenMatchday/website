@@ -6,7 +6,8 @@ export const PUBLIC_PAGES = [
   { file: "capabilities.html", title: "Capabilities -- Open Matchday", description: "Generated capability matrix for Open Matchday roles and platforms. States are verified, partial, unverified, or out of scope.", nav: "Capabilities", index: true },
   { file: "sports.html", title: "Sports catalog -- Open Matchday", description: "Generated sport catalog: available basketball and futsal packages plus planned later sports listed without empty playable shells.", nav: "Sports", index: true },
   { file: "themes.html", title: "Themes catalog -- Open Matchday", description: "Generated declarative theme catalog for Open Matchday graphics packages.", nav: "Themes", index: true },
-  { file: "registry.html", title: "Registry browser -- Open Matchday", description: "Search the public Open Matchday teams registry index. Shipped fixtures are clearly fictional.", nav: "Registry", index: true },
+  { file: "assets.html", title: "Default assets -- Open Matchday", description: "Default sports package assets: court and pitch geometry, formations, scoreboard field schemas, and motion clips. No fabricated match scores.", nav: "Assets", index: true },
+  { file: "registry.html", title: "Registry browser -- Open Matchday", description: "Search the public Open Matchday teams registry index. Shipped fixtures are clearly labeled fictional schema samples, not real clubs or matches.", nav: "Registry", index: true },
   { file: "privacy.html", title: "Privacy -- Open Matchday", description: "Open Matchday privacy stub: local-first production, public registry fields, minors photo rules, and how to request takedowns.", nav: "Privacy", index: true },
   { file: "takedown.html", title: "Takedown -- Open Matchday", description: "How to request removal of public registry content from Open Matchday. Git history erasure is not promised.", nav: "Takedown", index: true },
 ]
@@ -62,6 +63,9 @@ export const renderHead = ({ page, meta, absoluteUrl }) => {
   <meta property="og:url" content="${escapeHtml(canonical)}">
   <meta property="og:image" content="${escapeHtml(meta.organization.logo)}">
   <meta property="og:locale" content="en_US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>`
@@ -88,6 +92,8 @@ export const renderChromeEnd = () => `  </main>
       <p translate="no">Open Matchday -- MIT</p>
       <p>
         <a href="https://github.com/OpenMatchday">GitHub organization</a>
+        ·
+        <a href="https://openmatchday.github.io/docs/">Docs site</a>
         ·
         <a href="privacy.html">Privacy</a>
         ·

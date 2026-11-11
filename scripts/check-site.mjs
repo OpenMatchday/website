@@ -29,6 +29,7 @@ const requiredFiles = [
   "generated/themes-catalog.v0.json",
   "generated/teams-catalog.v0.json",
   "generated/capability-matrix.v0.json",
+  "generated/assets-catalog.v0.json",
 ]
 
 for (const name of requiredFiles) {
@@ -228,6 +229,10 @@ if (/app store|play store|microsoft store/i.test(downloads)) {
 }
 
 const docsPage = readFileSync(join(siteDir, "docs.html"), "utf8")
+if (!docsPage.includes("https://openmatchday.github.io/docs/")) {
+  console.error("docs.html missing docs site link")
+  process.exit(1)
+}
 if (!docsPage.includes("https://github.com/OpenMatchday/docs")) {
   console.error("docs.html missing docs repository link")
   process.exit(1)
@@ -310,11 +315,31 @@ for (const needle of [
   "registry-search.js",
   "generated/teams-catalog.v0.json",
   "fictional",
+  "Not match data",
 ]) {
   if (!registryHtml.includes(needle)) {
     console.error(`registry.html missing marker: ${needle}`)
     process.exit(1)
   }
+}
+
+const assetsHtml = readFileSync(join(siteDir, "assets.html"), "utf8")
+const assetsCatalog = JSON.parse(readFileSync(join(dataDir, "assets-catalog.v0.json"), "utf8"))
+for (const needle of ["Default package assets", "Formations", "Scoreboard fields", "asset-svg"]) {
+  if (!assetsHtml.includes(needle)) {
+    console.error(`assets.html missing marker: ${needle}`)
+    process.exit(1)
+  }
+}
+for (const pkg of assetsCatalog.packages) {
+  if (!assetsHtml.includes(pkg.display_name)) {
+    console.error(`assets.html missing package ${pkg.id}`)
+    process.exit(1)
+  }
+}
+if (/home_score.{0,40}\d{2,}/i.test(assetsHtml)) {
+  console.error("assets.html must not invent match scores")
+  process.exit(1)
 }
 if (teams.entries.length < 1) {
   console.error("teams catalog has no searchable entries")
