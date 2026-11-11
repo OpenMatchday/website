@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url"
 
 const siteDir = fileURLToPath(new URL("../site", import.meta.url))
 
-const required = ["index.html", ".nojekyll", "styles.css"]
+const required = ["index.html", ".nojekyll", "styles.css", "brand.css", "mark.svg"]
 for (const name of required) {
   const path = join(siteDir, name)
   if (!statSync(path, { throwIfNoEntry: false })?.isFile()) {
@@ -21,6 +21,8 @@ const banned = [
   /client_secret\s*[:=]/i,
 ]
 
+const bannedHex = ["#7C3AED", "#8B5CF6", "#A855F7", "#6366F1", "#4F46E5", "#2f6fed"]
+
 const walk = (dir) => {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
     const path = join(dir, entry.name)
@@ -36,6 +38,16 @@ const walk = (dir) => {
         process.exit(1)
       }
     }
+    for (const hex of bannedHex) {
+      if (text.toUpperCase().includes(hex.toUpperCase())) {
+        console.error(`banned brand hex ${hex} in ${relative(siteDir, path)}`)
+        process.exit(1)
+      }
+    }
+    if (/backdrop-filter\s*:\s*blur/i.test(text)) {
+      console.error(`glassmorphism pattern in ${relative(siteDir, path)}`)
+      process.exit(1)
+    }
   }
 }
 
@@ -49,6 +61,26 @@ if (!html.includes("Open Matchday")) {
 if (!html.includes('name="robots" content="noindex,nofollow"')) {
   console.error("spike page must stay noindex")
   process.exit(1)
+}
+if (!html.includes("ON AIR")) {
+  console.error("index.html missing tally sample")
+  process.exit(1)
+}
+
+const css = readFileSync(join(siteDir, "styles.css"), "utf8")
+const brand = readFileSync(join(siteDir, "brand.css"), "utf8")
+for (const needle of [
+  "--om-director-bg",
+  "--om-camera-bg",
+  "--om-tally-on-bg",
+  "#b00020",
+  "brand.css",
+]) {
+  const hay = needle === "brand.css" ? css : `${css}\n${brand}`
+  if (!hay.toLowerCase().includes(needle.toLowerCase())) {
+    console.error(`site styles missing ${needle}`)
+    process.exit(1)
+  }
 }
 
 console.log("SITE_CHECK_OK")

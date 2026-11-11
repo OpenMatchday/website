@@ -1,0 +1,47 @@
+/* Mirrored from OpenMatchday/design tokens/brand.css v0.1.0
+ * Keep in sync with design_tokens_version; do not invent local brand colors.
+ * License: MIT. Copyright 2026 Open Matchday contributors.
+ */
+
+:root {
+  --om-space-unit: 8px;
+  --om-font-display: ui-sans-serif, "Segoe UI", "Helvetica Neue", sans-serif;
+  --om-font-body: ui-sans-serif, "Segoe UI", "Helvetica Neue", sans-serif;
+  --om-font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+  --om-tracking-display: -0.03em;
+  --om-tracking-tally: 0.12em;
+
+  --om-director-bg: #0f1412;
+  --om-director-surface: #13261f;
+  --om-director-surface-raised: #1a2a22;
+  --om-director-border: #2a3832;
+  --om-director-border-active: #3d8b6e;
+  --om-director-text: #e8ede9;
+  --om-director-text-muted: #9bb0a4;
+  --om-director-accent: #3d8b6e;
+  --om-director-accent-pressed: #2f6b55;
+  --om-director-warning: #e8c547;
+  --om-director-danger: #8b3d3d;
+  --om-director-focus: #7ec8a8;
+
+  --om-camera-bg: #dde6e0;
+  --om-camera-surface: #f2f5f3;
+  --om-camera-surface-raised: #ffffff;
+  --om-camera-border: #a8b8b0;
+  --om-camera-border-active: #1b4d3e;
+  --om-camera-text: #1a2420;
+  --om-camera-text-muted: #4a5c54;
+  --om-camera-accent: #1b4d3e;
+  --om-camera-accent-pressed: #143b30;
+  --om-camera-warning: #8a6b12;
+  --om-camera-danger: #8b3d3d;
+  --om-camera-focus: #1b4d3e;
+
+  --om-tally-on-bg: #b00020;
+  --om-tally-on-border: #ff4d4d;
+  --om-tally-on-text: #ffffff;
+  --om-tally-off-bg: #1a2420;
+  --om-tally-off-border: #2a3832;
+  --om-tally-off-text: #9bb0a4;
+  --om-tally-min-height: 88px;
+}
