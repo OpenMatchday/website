@@ -4,35 +4,102 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Open Matchday -- website spike</title>
-  <meta name="description" content="Non-production GitHub Pages spike for Open Matchday. No product claims.">
-  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0f1412">
+  <title>Open Matchday -- local sports broadcast production</title>
+  <meta name="description" content="Open Matchday turns phones and tablets into a local sports broadcast crew: cameras, scoreboard OCR, clocks, graphics, and Program outputs without requiring the Internet.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main>
-    <img class="brand-mark" src="mark.svg" width="64" height="64" alt="Open Matchday mark">
-    <p class="brand" translate="no">Open Matchday</p>
-    <h1>Website hosting spike</h1>
-    <p>
-      Non-production proof that the <code>website</code> repository can publish
-      a static artifact to GitHub Pages. This page makes no latency, capability,
-      or product claims.
-    </p>
-    <p class="tally-sample" aria-label="Sample on-air tally">ON AIR</p>
-    <section class="guidelines" aria-labelledby="brand-guidelines">
-      <h2 id="brand-guidelines">Brand guidelines (OM-037)</h2>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="index.html" aria-current="page" aria-label="Open Matchday home">
+        <img class="brand-mark" src="mark.svg" width="40" height="40" alt="">
+        <span class="brand-name" translate="no">Open Matchday</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Product</a>
+        <a href="workflow.html">Workflow</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="docs.html">Docs</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="takedown.html">Takedown</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-brand">
+      <p class="hero-brand" id="hero-brand" translate="no">Open Matchday</p>
+      <h1>Local sports broadcast production on devices you already have</h1>
+      <p class="lede">
+        Phones and tablets are cameras. Operators run clocks, scores, lineups,
+        graphics and themes. A director chooses Preview and Program and sends
+        independently laid-out outputs to recording and live streams. Local
+        production never needs the Internet or an account.
+      </p>
+      <div class="cta-row">
+        <a class="cta" href="workflow.html">See the matchday workflow</a>
+        <a class="cta cta-secondary" href="downloads.html">Get the source</a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="what-it-is">
+      <h2 id="what-it-is">What ships in the product</h2>
       <ul>
-        <li>Dark director workspace tokens</li>
-        <li>Daylight camera control tokens</li>
-        <li>Unmistakable tally red reserved for on-air</li>
+        <li>Pairing over BLE where supported, with QR and manual IP always available for control.</li>
+        <li>Media over Wi-Fi or Ethernet only; the app refuses cellular and BLE for media.</li>
+        <li>Director Preview and Program buses, explicit Cut/Take, tally, independent audio, recording and live outputs with measured enablement gates.</li>
+        <li>Scoreboard reader with four-corner calibration and on-device OCR regions.</li>
+        <li>Sports packages for basketball and futsal variants with cited rules.</li>
+        <li>Public teams registry for offline cache, plus a website contribution path that opens pull requests (online, optional).</li>
+      </ul>
+      <p class="note">
+        <strong>Honest scope.</strong> This site does not publish latency,
+        bitrate, or capability numbers. Verified capability catalogs land in a
+        later generation task. Store packages are not claimed until a release
+        publishes them.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="roles">
+      <h2 id="roles">Roles</h2>
+      <ul class="role-list">
+        <li><strong>Director</strong><span>Approves devices; Preview/Program; Cut/Take; outputs; audio; health.</span></li>
+        <li><strong>Camera</strong><span>Capture and send media; receive tally.</span></li>
+        <li><strong>Scoreboard Reader</strong><span>Calibrated board capture; OCR readings.</span></li>
+        <li><strong>Event Operator</strong><span>Clocks, scores, period/fouls, authority confirms.</span></li>
+        <li><strong>Graphics Operator</strong><span>Scenes, templates, themes, layout drafts.</span></li>
+        <li><strong>Social Operator</strong><span>Templates, drafts, export, approved publishing.</span></li>
+        <li><strong>Program Monitor</strong><span>View Program (and optionally Preview) without control.</span></li>
       </ul>
     </section>
-    <p class="meta">
-      Host path: project site at
+
+    <section class="section" aria-labelledby="screenshots">
+      <h2 id="screenshots">Screenshots</h2>
+      <p>
+        Marketing and docs use real screenshots only. No device-frame mockups
+        with fabricated UI are published here. Captures will appear on this page
+        after consent-cleared recordings exist.
+      </p>
+    </section>
+
+    <p class="meta-line">
+      Hosted as a GitHub Pages project site at
       <code>https://openmatchday.github.io/website/</code>
       (not an organization root site; not a custom domain).
     </p>
   </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p translate="no">Open Matchday -- MIT</p>
+      <p>
+        <a href="https://github.com/OpenMatchday">GitHub organization</a>
+        ·
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="takedown.html">Takedown</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

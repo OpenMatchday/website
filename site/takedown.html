@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0f1412">
+  <title>Takedown -- Open Matchday</title>
+  <meta name="description" content="How to request removal of Open Matchday registry content. Git history is not totally erasable.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="index.html" aria-label="Open Matchday home">
+        <img class="brand-mark" src="mark.svg" width="40" height="40" alt="">
+        <span class="brand-name" translate="no">Open Matchday</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Product</a>
+        <a href="workflow.html">Workflow</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="docs.html">Docs</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="takedown.html" aria-current="page">Takedown</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="hero-brand" translate="no">Open Matchday</p>
+      <h1 class="page-title">Takedown</h1>
+      <p class="lede">
+        Request removal or replacement of public registry content. This page is
+        a public stub aligned with the docs process.
+      </p>
+    </header>
+
+    <section class="section" aria-labelledby="scope">
+      <h2 id="scope">Scope</h2>
+      <p>
+        Covers public registry content in the
+        <a href="https://github.com/OpenMatchday/teams">teams</a>
+        repository (clubs, teams, players, photos, and related metadata) and
+        mirrored website catalog copies after generation tasks land.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="how">
+      <h2 id="how">How to request a takedown</h2>
+      <ol>
+        <li>
+          Open a GitHub issue in
+          <a href="https://github.com/OpenMatchday/teams/issues/new">OpenMatchday/teams</a>
+          with title prefix <code>takedown:</code> and identify the stable ids or file paths.
+        </li>
+        <li>Include enough detail to locate the content (stable id, package id, photo path). Do not send unnecessary personal data.</li>
+      </ol>
+      <p>
+        Full process text:
+        <a href="https://github.com/OpenMatchday/docs/blob/main/privacy/takedown.md">docs/privacy/takedown.md</a>.
+      </p>
+    </section>
+
+    <section class="section" aria-labelledby="history">
+      <h2 id="history">Git history</h2>
+      <p>
+        Open Matchday does not promise total erasure of Git history. Removing a
+        file from <code>main</code> stops shipping it in new clones and
+        releases, but historical commits, forks, and caches may still contain
+        prior copies. Maintainers will not rewrite public history for routine
+        takedowns.
+      </p>
+      <p class="note">
+        <strong>Priority.</strong> For rights or objection cases, maintainers
+        prioritize stopping distribution on current <code>main</code> and
+        future releases.
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p translate="no">Open Matchday -- MIT</p>
+      <p>
+        <a href="https://github.com/OpenMatchday">GitHub organization</a>
+        ·
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="takedown.html">Takedown</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

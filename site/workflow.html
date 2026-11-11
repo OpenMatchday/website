@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0f1412">
+  <title>Workflow -- Open Matchday</title>
+  <meta name="description" content="Matchday workflow: install, open an event, pair devices, calibrate OCR, operate clocks and graphics, cut Program, then export.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="index.html" aria-label="Open Matchday home">
+        <img class="brand-mark" src="mark.svg" width="40" height="40" alt="">
+        <span class="brand-name" translate="no">Open Matchday</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Product</a>
+        <a href="workflow.html" aria-current="page">Workflow</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="docs.html">Docs</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="takedown.html">Takedown</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="hero-brand" translate="no">Open Matchday</p>
+      <h1 class="page-title">Matchday workflow</h1>
+      <p class="lede">
+        One composition from install to export. Control stays on the local LAN;
+        media uses Wi-Fi or Ethernet only.
+      </p>
+    </header>
+
+    <ol class="steps">
+      <li>Install or build the local app packages for the platforms you run (Flutter app plus media modules per the capability matrix).</li>
+      <li>Create or open an event. Optionally pin offline registry snapshots for teams and seasons.</li>
+      <li>Pair devices: BLE or QR/manual IP for control. Director approves each device and assigns roles before it joins the session.</li>
+      <li>When OCR is used, calibrate the scoreboard reader with four corners and define regions.</li>
+      <li>Operators set clocks, scores, lineups, graphics and themes. Social drafts stay local until publishing accounts are connected.</li>
+      <li>Director selects Preview and Program, cuts to air, and enables recording and live outputs with independent layouts.</li>
+      <li>After the match: stop outputs, export recordings and social drafts. Optionally contribute roster updates online through the website path.</li>
+    </ol>
+
+    <section class="section" aria-labelledby="planes">
+      <h2 id="planes">Control versus media</h2>
+      <ul>
+        <li>Control-plane pairing may use BLE where the matrix allows, or QR/manual IP on every supported platform.</li>
+        <li>Media streams use Wi-Fi or Ethernet only. The product UI states this and refuses cellular or BLE for media.</li>
+        <li>No paired device joins the event session until the director explicitly approves it.</li>
+      </ul>
+      <p class="note">
+        <strong>No fabricated UI shots.</strong> This page describes the
+        workflow in text until real, consent-cleared screenshots are available.
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p translate="no">Open Matchday -- MIT</p>
+      <p>
+        <a href="https://github.com/OpenMatchday">GitHub organization</a>
+        ·
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="takedown.html">Takedown</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

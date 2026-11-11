@@ -9,11 +9,26 @@ Part of the [OpenMatchday](https://github.com/OpenMatchday) organization.
 Provisional host: **GitHub Pages** from this repository as a **project site**.
 
 - Default URL: `https://openmatchday.github.io/website/`
-- Organization root (`https://openmatchday.github.io/`) requires a separate repository named `OpenMatchday.github.io` per [GitHub Pages site types](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages). That repo does not exist; this spike does not invent a custom domain.
+- Organization root (`https://openmatchday.github.io/`) requires a separate repository named `OpenMatchday.github.io` per [GitHub Pages site types](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages). That repo does not exist; this project does not invent a custom domain.
 - Publish path: GitHub Actions workflow `.github/workflows/pages.yml` uploading the `site/` static artifact (`build_type=workflow`).
 - Client artifact must contain no server secrets (checked by `scripts/check-site.mjs`).
 
 Spike details: sibling `docs` repo `spikes/d6-website-stack-hosting.md`.
+
+## Pages (OM-038)
+
+Static HTML under `site/`:
+
+| Page | File |
+|---|---|
+| Product | `index.html` |
+| Workflow | `workflow.html` |
+| Downloads | `downloads.html` |
+| Docs entry | `docs.html` |
+| Privacy stub | `privacy.html` |
+| Takedown stub | `takedown.html` |
+
+AC-12.3: real screenshots only; none shipped yet. Generated catalogs, registry browser, contribution wizard, and SEO budget are later tasks.
 
 ## Local checks
 

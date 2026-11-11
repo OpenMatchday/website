@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0f1412">
+  <title>Privacy -- Open Matchday</title>
+  <meta name="description" content="Open Matchday privacy stub: local-first production, public registry fields, minors photo rules, and how to request takedowns.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="index.html" aria-label="Open Matchday home">
+        <img class="brand-mark" src="mark.svg" width="40" height="40" alt="">
+        <span class="brand-name" translate="no">Open Matchday</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Product</a>
+        <a href="workflow.html">Workflow</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="docs.html">Docs</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="takedown.html">Takedown</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="hero-brand" translate="no">Open Matchday</p>
+      <h1 class="page-title">Privacy</h1>
+      <p class="lede">
+        Stub for product privacy expectations. Local match production does not
+        require an Open Matchday account or Internet access.
+      </p>
+    </header>
+
+    <section class="section" aria-labelledby="local">
+      <h2 id="local">Local production</h2>
+      <ul>
+        <li>Event state, recordings, and social drafts stay on devices you control unless you export or publish them.</li>
+        <li>Director approval gates which devices join a session.</li>
+        <li>Optional online features (registry contribution wizard, social publishing) are separate from local production.</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="registry">
+      <h2 id="registry">Public registry</h2>
+      <ul>
+        <li>The <span translate="no">teams</span> repository is a public Git registry of sports, competitions, clubs, teams, seasons, and players.</li>
+        <li>Only public fields are allowed. Private contacts, dates of birth, and similar sensitive fields are banned from the schema.</li>
+        <li>Minors default to no photo. Consent evidence for photos is never committed to Git.</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="accounts">
+      <h2 id="accounts">Online accounts (optional)</h2>
+      <ul>
+        <li>Contribution and publishing flows use separate credential planes from local production accounts.</li>
+        <li>Social publishing uses official provider APIs only after explicit operator approval; unverified providers stay disabled.</li>
+        <li>This static site does not embed community backend secrets.</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="contact">
+      <h2 id="contact">Contact for privacy and takedown</h2>
+      <p>
+        Open a GitHub issue in
+        <a href="https://github.com/OpenMatchday/teams/issues/new">OpenMatchday/teams</a>
+        with title prefix <code>takedown:</code> and identify the stable ids or
+        file paths. Do not send unnecessary personal data. See the
+        <a href="takedown.html">takedown page</a> for process limits.
+      </p>
+      <p class="note">
+        <strong>No dedicated public email is published yet.</strong> The
+        GitHub issue path is the contact method for this stub. Maintainers will
+        not promise total erasure of Git history.
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p translate="no">Open Matchday -- MIT</p>
+      <p>
+        <a href="https://github.com/OpenMatchday">GitHub organization</a>
+        ·
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="takedown.html">Takedown</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
