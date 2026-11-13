@@ -8,6 +8,8 @@ export const PUBLIC_PAGES = [
   { file: "themes.html", title: "Themes catalog -- Open Matchday", description: "Generated declarative theme catalog for Open Matchday graphics packages.", nav: "Themes", index: true },
   { file: "assets.html", title: "Default assets -- Open Matchday", description: "Default sports package assets: court and pitch geometry, formations, scoreboard field schemas, and motion clips. No fabricated match scores.", nav: "Assets", index: true },
   { file: "registry.html", title: "Registry browser -- Open Matchday", description: "Search the public Open Matchday teams registry index. Shipped fixtures are clearly labeled fictional schema samples, not real clubs or matches.", nav: "Registry", index: true },
+  { file: "contribute.html", title: "Contribute -- Open Matchday", description: "Sign in with Google and submit a teams registry contribution. The community backend validates, previews, and queues an idempotent submission.", nav: "Contribute", index: true },
+  { file: "status.html", title: "Submission status -- Open Matchday", description: "Look up an Open Matchday registry contribution by id. Statuses: queued, PR opened, changes requested, merged, rejected.", nav: "Status", index: true },
   { file: "privacy.html", title: "Privacy -- Open Matchday", description: "Open Matchday privacy stub: local-first production, public registry fields, minors photo rules, and how to request takedowns.", nav: "Privacy", index: true },
   { file: "takedown.html", title: "Takedown -- Open Matchday", description: "How to request removal of public registry content from Open Matchday. Git history erasure is not promised.", nav: "Takedown", index: true },
 ]

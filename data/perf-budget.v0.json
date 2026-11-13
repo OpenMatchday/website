@@ -5,7 +5,7 @@
   "limits": {
     "max_html_bytes": 120000,
     "max_css_bytes": 40000,
-    "max_js_bytes": 40000,
+    "max_js_bytes": 80000,
     "max_svg_bytes": 20000,
     "max_total_site_bytes": 500000,
     "max_single_asset_bytes": 120000

@@ -30,7 +30,9 @@ Spike details: sibling `docs` repo `spikes/d6-website-stack-hosting.md`.
 | Privacy | `privacy.html` | Local-first + registry privacy stub |
 | Takedown | `takedown.html` | Public takedown stub |
 
-AC-12.3: real screenshots only; none shipped yet. Contribution wizard API is OM-040.
+AC-12.3: real screenshots only; none shipped yet.
+
+Contribution wizard (`contribute.html`) and status (`status.html`) call the community API at `community_api_base` from `data/site-meta.v0.json`. No server secrets in this repo.
 
 ## Catalog sync and generate
 

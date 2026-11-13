@@ -4,6 +4,7 @@
   "base_url": "https://openmatchday.github.io/website/",
   "locale": "en",
   "theme_color": "#0f1412",
+  "community_api_base": "https://open-matchday-community.vercel.app",
   "organization": {
     "name": "Open Matchday",
     "url": "https://github.com/OpenMatchday",
@@ -14,6 +15,7 @@
     "sitemap": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap",
     "robots_meta": "https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag",
     "canonical": "https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls",
-    "og": "https://ogp.me/"
+    "og": "https://ogp.me/",
+    "google_oidc": "https://developers.google.com/identity/protocols/oauth2/openid-connect"
   }
 }

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0f1412">
+  <title>Contribute -- Open Matchday</title>
+  <meta name="description" content="Sign in with Google and submit a teams registry contribution. The community backend validates, previews, and queues an idempotent submission.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://openmatchday.github.io/website/contribute.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Open Matchday" translate="no">
+  <meta property="og:title" content="Contribute -- Open Matchday">
+  <meta property="og:description" content="Sign in with Google and submit a teams registry contribution. The community backend validates, previews, and queues an idempotent submission.">
+  <meta property="og:url" content="https://openmatchday.github.io/website/contribute.html">
+  <meta property="og:image" content="https://openmatchday.github.io/website/mark.svg">
+  <meta property="og:locale" content="en_US">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Contribute -- Open Matchday","description":"Sign in with Google and submit a teams registry contribution. The community backend validates, previews, and queues an idempotent submission.","url":"https://openmatchday.github.io/website/contribute.html","isPartOf":{"@type":"WebSite","name":"Open Matchday","url":"https://openmatchday.github.io/website/"},"publisher":{"@type":"Organization","name":"Open Matchday","url":"https://github.com/OpenMatchday"}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand-lockup" href="index.html" aria-label="Open Matchday home">
+        <img class="brand-mark" src="mark.svg" width="40" height="40" alt="">
+        <span class="brand-name" translate="no">Open Matchday</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Product</a>
+        <a href="workflow.html">Workflow</a>
+        <a href="downloads.html">Downloads</a>
+        <a href="docs.html">Docs</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="sports.html">Sports</a>
+        <a href="themes.html">Themes</a>
+        <a href="assets.html">Assets</a>
+        <a href="registry.html">Registry</a>
+        <a href="contribute.html" aria-current="page">Contribute</a>
+        <a href="status.html">Status</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="takedown.html">Takedown</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <header class="hero">
+      <p class="hero-brand" translate="no">Open Matchday</p>
+      <h1 class="page-title">Contribute to the registry</h1>
+      <p class="lede">
+        Sign in with Google through the community backend, choose sport and
+        team fields, validate a public preview, then submit once. Submissions
+        queue as <code>queued</code> until a maintainer pull request opens.
+      </p>
+    </header>
+    <p class="note warn-note">
+      <strong>Public fields only.</strong> No dates of birth, contacts, or
+      Google email appear in previews or pull requests. Minors default to no
+      photo. SVG and remote image URLs are rejected.
+    </p>
+    <section class="section" aria-labelledby="sign-in">
+      <h2 id="sign-in">Sign in</h2>
+      <p id="auth-status" class="meta-line" aria-live="polite">Checking session…</p>
+      <div class="cta-row">
+        <a id="google-sign-in" class="cta" href="#">Sign in with Google</a>
+        <button id="sign-out" type="button" class="cta cta-secondary" hidden>Sign out</button>
+      </div>
+      <p class="note">
+        OIDC source:
+        <a href="https://developers.google.com/identity/protocols/oauth2/openid-connect">Google OpenID Connect</a>.
+        Live Google credentials must be configured on the community deploy.
+      </p>
+    </section>
+    <section class="section" aria-labelledby="wizard">
+      <h2 id="wizard">Submission wizard</h2>
+      <form id="contribute-form" class="wizard-form" novalidate>
+        <fieldset>
+          <legend>Selection</legend>
+          <label for="sport_id">Sport id</label>
+          <input id="sport_id" name="sport_id" required autocomplete="off" spellcheck="false" value="basketball">
+          <label for="category_id">Category id</label>
+          <input id="category_id" name="category_id" required autocomplete="off" spellcheck="false" value="senior">
+          <label for="competition_id">Competition id</label>
+          <input id="competition_id" name="competition_id" required autocomplete="off" spellcheck="false" value="harbor_open">
+        </fieldset>
+        <fieldset>
+          <legend>Club, team, season</legend>
+          <label for="club_id">Club id</label>
+          <input id="club_id" name="club_id" required autocomplete="off" spellcheck="false">
+          <label for="club_name">Club name</label>
+          <input id="club_name" name="club_name" required autocomplete="organization">
+          <label for="country_id">Country id (ISO alpha-2 lowercased)</label>
+          <input id="country_id" name="country_id" required autocomplete="off" spellcheck="false" value="it">
+          <label for="team_id">Team id</label>
+          <input id="team_id" name="team_id" required autocomplete="off" spellcheck="false">
+          <label for="team_name">Team name</label>
+          <input id="team_name" name="team_name" required>
+          <label for="season_id">Season id</label>
+          <input id="season_id" name="season_id" required autocomplete="off" spellcheck="false">
+          <label for="season_name">Season name</label>
+          <input id="season_name" name="season_name" required>
+        </fieldset>
+        <fieldset>
+          <legend>Player</legend>
+          <label for="player_id">Player id</label>
+          <input id="player_id" name="player_id" required autocomplete="off" spellcheck="false">
+          <label for="player_name">Player name</label>
+          <input id="player_name" name="player_name" required>
+          <label for="player_number">Squad number</label>
+          <input id="player_number" name="player_number" required inputmode="numeric">
+          <label for="position_id">Position id (optional)</label>
+          <input id="position_id" name="position_id" autocomplete="off" spellcheck="false">
+          <label class="check-line">
+            <input id="is_minor" name="is_minor" type="checkbox">
+            Player is a minor (no photo)
+          </label>
+          <label for="photo_file">Photo (JPEG, PNG, or WebP; optional)</label>
+          <input id="photo_file" name="photo_file" type="file" accept="image/jpeg,image/png,image/webp">
+          <label for="photo_attribution">Photo attribution</label>
+          <input id="photo_attribution" name="photo_attribution" autocomplete="off">
+          <label for="photo_license">Photo license</label>
+          <input id="photo_license" name="photo_license" autocomplete="off" placeholder="CC0-1.0">
+        </fieldset>
+        <fieldset>
+          <legend>Credit and consent</legend>
+          <label for="handle">Public handle</label>
+          <input id="handle" name="handle" required autocomplete="username" spellcheck="false">
+          <label for="profile_url">Profile link (optional https)</label>
+          <input id="profile_url" name="profile_url" type="url" inputmode="url" autocomplete="url">
+          <label class="check-line">
+            <input id="rights_confirmed" name="rights_confirmed" type="checkbox" required>
+            I confirm I have the rights to submit this public registry data
+          </label>
+          <label class="check-line">
+            <input id="consent_confirmed" name="consent_confirmed" type="checkbox" required>
+            I confirm consent rules for any player photos (minors: no photo by default)
+          </label>
+        </fieldset>
+        <div class="cta-row">
+          <button type="button" id="btn-validate" class="cta cta-secondary">Validate</button>
+          <button type="button" id="btn-preview" class="cta cta-secondary">Preview</button>
+          <button type="submit" id="btn-submit" class="cta">Submit</button>
+        </div>
+      </form>
+      <p id="wizard-status" class="meta-line" aria-live="polite"></p>
+      <pre id="wizard-preview" class="preview-block" hidden tabindex="0" aria-label="Public preview JSON"></pre>
+    </section>
+    <script>
+      window.OM_COMMUNITY_API = "https://open-matchday-community.vercel.app";
+    </script>
+    <script src="contribute.js" defer></script>
+
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <p translate="no">Open Matchday -- MIT</p>
+      <p>
+        <a href="https://github.com/OpenMatchday">GitHub organization</a>
+        ·
+        <a href="https://openmatchday.github.io/docs/">Docs site</a>
+        ·
+        <a href="privacy.html">Privacy</a>
+        ·
+        <a href="takedown.html">Takedown</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

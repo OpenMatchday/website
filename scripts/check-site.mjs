@@ -25,6 +25,8 @@ const requiredFiles = [
   "sitemap.xml",
   "robots.txt",
   "registry-search.js",
+  "contribute.js",
+  "status.js",
   "generated/sports-catalog.v0.json",
   "generated/themes-catalog.v0.json",
   "generated/teams-catalog.v0.json",
@@ -113,10 +115,35 @@ if (cssBytes > budget.limits.max_css_bytes) {
   process.exit(1)
 }
 
-const jsBytes = statSync(join(siteDir, "registry-search.js")).size
+const jsBytes =
+  statSync(join(siteDir, "registry-search.js")).size +
+  statSync(join(siteDir, "contribute.js")).size +
+  statSync(join(siteDir, "status.js")).size
 if (jsBytes > budget.limits.max_js_bytes) {
   console.error(`js bytes ${jsBytes} > ${budget.limits.max_js_bytes}`)
   process.exit(1)
+}
+
+const contribute = readFileSync(join(siteDir, "contribute.html"), "utf8")
+for (const needle of [
+  "Sign in with Google",
+  "Submission wizard",
+  "OM_COMMUNITY_API",
+  meta.community_api_base,
+  "contribute.js",
+]) {
+  if (!contribute.includes(needle)) {
+    console.error(`contribute.html missing marker: ${needle}`)
+    process.exit(1)
+  }
+}
+
+const statusPage = readFileSync(join(siteDir, "status.html"), "utf8")
+for (const needle of ["Submission status", "status.js", "queued"]) {
+  if (!statusPage.includes(needle)) {
+    console.error(`status.html missing marker: ${needle}`)
+    process.exit(1)
+  }
 }
 
 const requiredNav = PUBLIC_PAGES.map((p) => p.file)
